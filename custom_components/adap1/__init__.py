@@ -15,9 +15,9 @@ async def async_setup_entry(hass: HomeAssistant, config_entry):
     """Set up the integration from a config entry."""
     hass.data[DOMAIN] = {}
 
-    host = config_entry.data.get("host", DEFAULT_HOST)
-    port = config_entry.data.get("port", DEFAULT_PORT)
-    update_interval = config_entry.data.get("update_interval", DEFAULT_UPDATE_INTERVAL)
+    host = config_entry.data.get("Kiszolgáló", DEFAULT_HOST)
+    port = config_entry.data.get("Port", DEFAULT_PORT)
+    update_interval = config_entry.data.get("Frissítési gyakoriság (másodperc)", DEFAULT_UPDATE_INTERVAL)
 
     # Az update_interval-t másodpercből timedelta-vá alakítjuk
     update_interval_timedelta = timedelta(seconds=update_interval)
