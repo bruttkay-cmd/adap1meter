@@ -1,0 +1,9 @@
+{
+  "name": "ADA P1 Meter",
+  "homeassistant": "2025.1.2",
+  "render_readme": true,
+  "domains": ["sensor"],
+  "iot_class": "local_polling",
+  "country": ["HU"],
+  "icon": "images/icon.png"
+}
