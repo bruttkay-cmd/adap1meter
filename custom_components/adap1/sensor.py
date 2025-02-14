@@ -75,6 +75,9 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
         name="ADA P1 Meter",
         model="ADA P1 Meter",
         sw_version=coordinator.data.get("os_version", "N/A"),
+        hw_version=coordinator.data.get("hardware_version", "N/A"),  # Hardver verzió
+        serial_number=coordinator.data.get("meter_serial_number", "N/A"),  # Sorozatszám
+        connections={("ip", coordinator.data.get("local_ip", "N/A"))},  # IP cím
     )
 
     sensors = []
