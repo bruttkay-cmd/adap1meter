@@ -1,7 +1,7 @@
 {
     "domain": "ada_okos_mero",
     "name": "ADA P1 Okos mérő",
-    "version": "1.0",
+    "version": "1.0.1",
     "documentation": "https://github.com/faustlod/adap1meter/tree/main",
     "dependencies": [],
     "codeowners": ["@faustlod"],
