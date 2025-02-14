@@ -1,4 +1,4 @@
-DOMAIN = "ada_okos_mero"
+DOMAIN = "adap1"
 DEFAULT_HOST = "okosvillanyora.local"
 DEFAULT_PORT = 8989
 DEFAULT_UPDATE_INTERVAL = 60
