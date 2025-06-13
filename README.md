@@ -10,7 +10,6 @@
 
 Ez az integráció lehetővé teszi az **ADA P1 Meter** eszköz adatainak lekérését a Home Assistant rendszerbe. Az integráció egy helyi hálózaton keresztül kommunikál az eszközzel, és számos szenzorral látja el a rendszert, amelyek az energiafogyasztással, feszültséggel, áramerősséggel és egyéb adatokkal kapcsolatos információkat jelenítenek meg.
 
-teszt
 
 ---
 
