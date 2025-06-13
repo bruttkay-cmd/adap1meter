@@ -1,7 +1,6 @@
 import logging
 import aiohttp
 import async_timeout
-
 from datetime import timedelta
 
 from homeassistant.core import HomeAssistant
