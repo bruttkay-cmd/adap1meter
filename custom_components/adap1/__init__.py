@@ -1,6 +1,8 @@
 import logging
 import aiohttp
 import async_timeout
+import custom_components.adap1.sensor
+
 from datetime import timedelta
 
 from homeassistant.core import HomeAssistant
