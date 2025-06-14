@@ -42,7 +42,11 @@ class AdaOkosMeroOptionsFlow(config_entries.OptionsFlow):
 
     def __init__(self, config_entry):
         """Initialize options flow."""
-        self.config_entry = config_entry
+       # Ne tárold el a config_entry objektumot közvetlenül! 
+       # self.config_entry = config_entry
+        self._data = config_entry.data
+
+
 
     async def async_step_init(self, user_input=None):
         """Manage the options."""
@@ -52,8 +56,11 @@ class AdaOkosMeroOptionsFlow(config_entries.OptionsFlow):
         return self.async_show_form(
             step_id="init",
             data_schema=vol.Schema({
-                vol.Required("host", default=self.config_entry.data.get("host")): str,
-                vol.Required("port", default=self.config_entry.data.get("port")): int,
-                vol.Required("update_interval", default=self.config_entry.data.get("update_interval")): int,
+                # vol.Required("host", default=self.config_entry.data.get("host")): str,
+                # vol.Required("port", default=self.config_entry.data.get("port")): int,
+                # vol.Required("update_interval", default=self.config_entry.data.get("update_interval")): int,
+                vol.Required("host", default=self._data.get("host")): str,
+                vol.Required("port", default=self._data.get("port")): int,
+                vol.Required("update_interval", default=self._data.get("update_interval")): int,                
             }),
         )
