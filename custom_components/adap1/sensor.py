@@ -142,6 +142,9 @@ class AdaOkosMeroSensor(CoordinatorEntity, SensorEntity):
     @property
     def name(self):
         """A szenzor felhasználóbarát nevének visszaadása."""
+        serial = self.coordinator.data.get("meter_serial_number", "")
+        if serial and serial != "N/A":
+            return f"{self._friendly_name} ({serial})"               
         return self._friendly_name
 
     @property
@@ -172,4 +175,5 @@ class AdaOkosMeroSensor(CoordinatorEntity, SensorEntity):
     @property
     def unique_id(self):
         """Egyedi azonosító visszaadása."""
-        return f"{DOMAIN}_{self._name}"
+        serial = self.coordinator.data.get("meter_serial_number", "").replace(" ", "_")
+        return f"{DOMAIN}_{serial}_{self._name}"
